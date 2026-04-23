@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AmbrosioHUB</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #b30000;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* ESTRELLAS DE FONDO */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background-image: 
+        radial-gradient(white 2px, transparent 2px),
+        radial-gradient(white 1.5px, transparent 1.5px),
+        radial-gradient(white 1px, transparent 1px);
+
+      background-size: 100px 100px, 150px 150px, 200px 200px;
+      background-position: 0 0, 50px 50px, 100px 100px;
+
+      opacity: 0.3;
+      z-index: -1;
+
+      animation: estrellas 60s linear infinite;
+    }
+
+    @keyframes estrellas {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-200px);
+      }
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background-color: #800000;
+    }
+
+    .hero {
+      padding: 100px 20px;
+      background-color: #cc0000;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+    }
+
+    .hero p {
+      font-size: 24px;
+    }
+
+    .hero .btn {
+      font-size: 22px;
+      padding: 15px 35px;
+    }
+
+    .btn {
+      background: white;
+      color: #b30000;
+      padding: 10px 20px;
+      display: inline-block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 50px 20px;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 250px;
+      margin: 10px;
+    }
+
+    /* TESTIMONIOS */
+    .testimonial {
+      background: white;
+      color: #b30000;
+      padding: 20px;
+      border-radius: 15px;
+      position: relative;
+      margin: 15px;
+      width: 250px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      text-align: left;
+    }
+
+    .testimonial::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 20px;
+      border-width: 15px 15px 0;
+      border-style: solid;
+      border-color: white transparent transparent transparent;
+    }
+
+    .testimonial p {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .testimonial strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #800000;
+      padding: 30px;
+      margin-top: 20px;
+    }
+
+    input {
+      padding: 10px;
+      margin: 5px;
+      width: 200px;
+    }
+
+    button {
+      background: white;
+      color: #b30000;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<header>
+  <div><strong>AmbrosioHUB</strong></div>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Menú</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <div>
+    <a href="#" class="btn">Reservar</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>AmbrosioHUB</h1>
+  <p>El primer tenedor libre dedicado a Ambrosoli del mundo</p>
+  <a href="#" class="btn">Quiero probar</a>
+</section>
+
+<section class="section">
+  <h2>¿Por qué elegirnos?</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🍬 Ilimitado</h3>
+      <p>Come todo lo que quieras, caramelos, chocolates, helados, postres y mermeladas</p>
+    </div>
+
+    <div class="card">
+      <h3>⚡ Rápido</h3>
+      <p>Acceso inmediato sin esperas</p>
+    </div>
+
+    <div class="card">
+      <h3>🎉 Único</h3>
+      <p>Experiencia dulce inolvidable, tenemos el mayor catálogo de Ambrosoli</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#cc0000;">
+  <h2>Lo que dicen nuestros clientes</h2>
+
+  <div class="grid">
+    <div class="testimonial">
+      <p>"rich, very rich"</p>
+      <strong>- Donal trump</strong>
+    </div>
+
+    <div class="testimonial">
+      <p>"Kids love it"</p>
+      <strong>- jeffrey Epstein, Agente del mossad</strong>
+    </div>
+
+    <div class="testimonial">
+      <p>"엘 메조르 테네도르 리브레 델 문도"</p>
+      <strong>- kim Jong un, presidente de corea</strong>
+    </div>
+  </div>
+
+  <h3>+ de 50 famosos nos han probado, 5 años de experiencia</h3>
+</section>
+
+<section class="section">
+  <h2>¿Qué nos hace únicos?</h2>
+  <p style="font-size:20px;">
+    El único tenedor libre 100% dedicado a productos Ambrosoli del mundo
+  </p>
+</section>
+
+<section class="section" style="background:#cc0000;">
+  <h2>Reserva tu experiencia</h2>
+  <p>Regístrate gratis y ten un 5% de descuento</p>
+
+  <form>
+    <input type="text" placeholder="Tu nombre" required><br>
+    <input type="email" placeholder="Tu email" required><br>
+    <button>Quiero el descuento</button>
+  </form>
+
+  <p>Sin compromiso, acceso inmediato</p>
+</section>
+
+<footer>
+  <p>Contacto: contacto@ambrosiohub.com</p>
+
+  <p>
+    <a href="#">Política de privacidad</a> |
+    <a href="#">Términos y condiciones</a>
+  </p>
+
+  <p>
+    Síguenos:
+    <a href="#">Instagram</a> |
+    <a href="#">Facebook</a>
+  </p>
+
+  <p>© 2026 AmbrosioHUB · Little Saint James</p>
+</footer>
+
+</body>
+</html>
